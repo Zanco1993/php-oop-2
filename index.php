@@ -11,6 +11,7 @@ require_once __DIR__ . '/./istanze/product.php';
 require_once __DIR__ . '/istanze/cibo.php';
 require_once __DIR__ . '/istanze/cucce.php';
 require_once __DIR__ . '/istanze/giochi.php';
+require_once __DIR__ . '/istanze/user.php';
 
 
 
