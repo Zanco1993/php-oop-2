@@ -6,32 +6,11 @@
 // BONUS:
 // Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibili solo in un periodo particolare (es. da maggio ad agosto).
 
-class Product
-{
-    protected string $marca;
-    protected string $price;
-    protected string $description;
-    protected string $color;
 
-    
-}
-
+require_once __DIR__ . '/./istanze/product.php';
 require_once __DIR__ . '/istanze/cibo.php';
 require_once __DIR__ . '/istanze/cucce.php';
 require_once __DIR__ . '/istanze/giochi.php';
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

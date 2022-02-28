@@ -5,18 +5,27 @@ class Toy extends Product
 {
     protected string $category; // adatto per taglia grande, media o piccola
 
-
-    // ----------------------------------------------------------------------
-
-    function __construct($_dbToy)
+    function __construct($_marca ,$_category)
     {
-        echo $this->marca = $_dbToy['marca'] . '<br>';
-        echo $this->price = $_dbToy['price'] . '<br>';
-        echo $this->description = $_dbToy['description'] . '<br>';
-        echo $this->category = $_dbToy['category'] . '<br>';
+        parent::__construct($_marca);
+        echo $this->marca = $_marca . '<br>';
+        echo $this->setCategory($_category) . '<br>';
+        echo '<hr>';
     }
-    // ----------------------------------------------------------------------
 
+    
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    public function setCategory($category)
+    {
+        if (!in_array($category, ["small", "medium", "adult"])) {
+            return "DATO NON VALIDO";
+        }
+        return $this->category = $category;
+    }
 }
 
 
@@ -24,19 +33,4 @@ class Toy extends Product
 
 
 // istanze di giochi
-$firstToy = new Toy(
-    [
-        'marca' => 'gioco1',
-        'price' => '20',
-        'description' => 'lorem',
-        'category' => 'adult'
-    ]
-);
-$secondToy = new Toy(
-    [
-        'marca' => 'gioco2',
-        'price' => '25',
-        'description' => 'lorem',
-        'category' => 'small'
-    ]
-);
+$firstToy = new Toy("chicco" ,"adult");

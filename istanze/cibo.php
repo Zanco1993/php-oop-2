@@ -2,35 +2,34 @@
 
 class Food extends Product
 {
-    protected string $expire; // scadenza
+    private string $expire; // scadenza
 
-    function __construct($_dbFood)
+    function __construct($_marca, $_expire)
     {
-       echo $this -> marca = $_dbFood['marca'] . '<br>';
-       echo $this -> price = $_dbFood['price'] . '<br>';
-       echo $this -> description = $_dbFood['description'] . '<br>';
-       echo $this -> expire = $_dbFood['expire'] . '<br>';
+       parent::__construct($_marca);
+       echo $this -> marca = $_marca . '<br>';
+       echo $this -> setExpire($_expire) . '<br>';
+       echo '<hr>';
+
+    }
+
+ 
+    public function getExpire()
+    {
+        return $this->expire;
+
+    }
+
+ 
+    public function setExpire($expire)
+    {
+       return $this->expire = $expire;
 
     }
 }
 
 
 // istanze di food
-$firstFood = new Food(
-    [
-        'marca' => 'trainer',
-        'price' => '10',
-        'description' => 'lorem',
-        'expire' => '2023/01/01'
-    ]
-    );
-$secondFood = new Food(
-    [
-        'marca' => 'virtus',
-        'price' => '15',
-        'description' => 'lorem',
-        'expire' => '2023/05/01'
-    ]
-    );
+$firstFood = new Food("cibo1", '2023-01-01');
 
 
