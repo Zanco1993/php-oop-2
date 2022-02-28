@@ -8,11 +8,12 @@
 
 class Product
 {
-    protected string $name;
+    protected string $marca;
     protected string $price;
     protected string $description;
     protected string $color;
-    protected string $marca;
+
+    
 }
 
 require_once __DIR__ . '/istanze/cibo.php';

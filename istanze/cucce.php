@@ -14,10 +14,10 @@ class Cucce extends Product
     }
 }
 
-// istanze di giochi
+// istanze di cucce
 $firstCuccia = new Cucce(
     [
-        'marca' => 'gioco1',
+        'marca' => 'cuccia1',
         'price' => '20',
         'description' => 'lorem',
         'forma' => 'circolare'
@@ -25,7 +25,7 @@ $firstCuccia = new Cucce(
 );
 $secondCuccia = new Cucce(
     [
-        'marca' => 'gioco2',
+        'marca' => 'cuccia2',
         'price' => '25',
         'description' => 'lorem',
         'forma' => 'quadrata'
