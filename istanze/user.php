@@ -61,4 +61,4 @@ class User
     }
 }
 
-$user1 = new User('Fabio', 'Zanconato', '1993/11/17');
+

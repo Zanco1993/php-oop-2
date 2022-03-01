@@ -5,12 +5,11 @@ class Cucce extends Product
 {
     protected string $forma; // rotonda, quadrata ecc...
 
-    function __construct($_marca, $_forma)
+    function __construct($_marca, $_price, $_forma)
     {
-        parent::__construct($_marca);
-        echo $this -> marca = $_marca . '<br>';
-        echo $this -> setForma($_forma) . '<br>';
-        echo '<hr>';
+        parent::__construct($_marca,$_price, $_forma);
+        $this->setForma($_forma);
+
     }
 
     /**
@@ -36,4 +35,4 @@ class Cucce extends Product
 }
 
 // istanze di cucce
-$firstCuccia = new Cucce("marca Cuccia", "quadrata");
+

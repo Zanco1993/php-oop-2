@@ -4,12 +4,10 @@ class Food extends Product
 {
     private string $expire; // scadenza
 
-    function __construct($_marca, $_expire)
+    function __construct($_marca, $_price, $_expire)
     {
-       parent::__construct($_marca);
-       echo $this -> marca = $_marca . '<br>';
-       echo $this -> setExpire($_expire) . '<br>';
-       echo '<hr>';
+       parent::__construct($_marca, $_price, $_expire);
+       $this -> setExpire($_expire);
 
     }
 
@@ -29,7 +27,7 @@ class Food extends Product
 }
 
 
-// istanze di food
-$firstFood = new Food("cibo1", '2023-01-01');
+
+
 
 

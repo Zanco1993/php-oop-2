@@ -5,12 +5,11 @@ class Toy extends Product
 {
     protected string $category; // adatto per taglia grande, media o piccola
 
-    function __construct($_marca ,$_category)
+
+    function __construct($_marca, $_price, $_category)
     {
-        parent::__construct($_marca);
-        echo $this->marca = $_marca . '<br>';
-        echo $this->setCategory($_category) . '<br>';
-        echo '<hr>';
+        parent::__construct($_marca, $_price, $_category);
+        $this->setCategory($_category);
     }
 
     
@@ -32,5 +31,5 @@ class Toy extends Product
 
 
 
-// istanze di giochi
-$firstToy = new Toy("chicco" ,"adult");
+
+
